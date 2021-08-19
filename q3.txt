@@ -1,0 +1,28 @@
+Prompt:
+If you could change 1 thing about your favorite framework/language/platform (pick one), what would it be?
+
+Response:
+Python, for the past year, has been my favorite language.
+On my local environment, I use Python 3.8, but for sharing and documenting my code (especially Machine Learning and AI) I use Google Colab, which is currently on Python 3.7.
+I often use assignment expressions (PEP 572) on my local environment, but since these are new to Python 3.8, I have to re-write my code whenever I want to share it on Google Colab.
+So, I would like to see Google Colab upgraded to Python 3.8 (or latest).
+
+Example use cases of assignment expressions:
+
+# Return x if a method call returns True
+if x := isBig(y):
+    return x
+
+# Handle a matched regex
+if (match := pattern.search(data)) is not None:
+    # Do something with match
+
+# A loop that can't be trivially rewritten using 2-arg iter()
+while chunk := file.read(8192):
+   process(chunk)
+
+# Reuse a value that's expensive to compute
+[y := f(x), y**2, y**3]
+
+# Share a subexpression between a comprehension filter clause and its output
+filtered_data = [y for x in data if (y := f(x)) is not None]
